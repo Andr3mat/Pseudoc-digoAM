@@ -1,0 +1,43 @@
+Algoritmo DiasVividos
+	Definir dia_nacimiento, mes_nacimiento, anio_nacimiento Como Entero;
+	Definir dia_actual, mes_actual, anio_actual Como Entero;
+	Definir total_dias, dias_años, dias_meses, dias_dias, anios_bisiestos Como Entero;
+	
+	
+	Escribir "Ingrese su día de nacimiento:";
+	Leer dia_nacimiento;
+	Escribir "Ingrese su mes de nacimiento:";
+	Leer mes_nacimiento;
+	Escribir "Ingrese su año de nacimiento:";
+	Leer anio_nacimiento;
+	
+	Escribir "Ingrese el día actual:";
+	Leer dia_actual;
+	Escribir "Ingrese el mes actual:";
+	Leer mes_actual;
+	Escribir "Ingrese el año actual:";
+	Leer anio_actual;
+	
+	dias_años <- (anio_actual - anio_nacimiento) * 365;
+	dias_meses <- (mes_actual - mes_nacimiento) * 30;
+	dias_dias <- dia_actual - dia_nacimiento;
+	
+	anios_bisiestos <-  TRUNC ( (anio_actual - anio_nacimiento) / 4)	
+	
+	dias_años <- TRUNC ( dias_años + anios_bisiestos);
+	
+	
+	Si dias_meses < 0 Entonces
+		dias_meses <- dias_meses + 360; 
+		dias_años <- dias_años - 365; 
+	FinSi
+	
+	Si dias_dias < 0 Entonces
+		dias_dias <- dias_dias + 30; 
+		dias_meses <- dias_meses - 30;
+	FinSi
+	
+	total_dias <- dias_años + dias_meses + dias_dias;
+	
+	Escribir "Usted ha vivido aproximadamente ", total_dias, " días.";
+FinAlgoritmo
