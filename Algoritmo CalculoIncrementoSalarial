@@ -1,0 +1,17 @@
+Algoritmo CalculoIncrementoSalarial
+	Definir salario_actual, incremento, nuevo_salario Como Real;
+	
+	Escribir "Ingrese el salario actual del empleado:";
+	Leer salario_actual;
+	
+	Si salario_actual < 15000 Entonces
+		incremento <- salario_actual * 0.20;
+	Sino
+		incremento <- salario_actual * 0.15;
+	FinSi
+	
+	nuevo_salario <- salario_actual + incremento;
+	
+	Escribir "El incremento salarial es de: $", incremento;
+	Escribir "El nuevo salario es de: $", nuevo_salario;
+FinAlgoritmo
