@@ -1,0 +1,27 @@
+Algoritmo Factorial
+	
+	numero <- entero
+	i <-entero
+	resultadofactorial <- real
+	
+	Escribir "Introduce un número para calcular su factorial:"
+    Leer numero
+	
+	Si numero < 0 Entonces
+		Escribir "El número debe ser no negativo."
+	SiNo
+		resultadoFactorial = 1
+	Fin Si
+	
+	Si numero > 0 Entonces
+		Para i <- 1 Hasta numero 
+			resultadoFactorial = resultadoFactorial * i
+		Fin Para
+	SiNo
+		
+	Fin Si
+	
+	Escribir "El factorial de ", numero, " es ", resultadoFactorial
+	
+	
+FinAlgoritmo
