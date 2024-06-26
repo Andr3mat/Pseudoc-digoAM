@@ -1,0 +1,20 @@
+Algoritmo CalcularFactorial
+	Definir numero, factorial Como Entero;
+	
+	Escribir "Ingrese el número para calcular su factorial:";
+	Leer numero
+	
+	Si numero < 0 Entonces
+		Escribir "El número no puede ser negativo";
+	Sino
+		Si numero = 0 Entonces
+			factorial <- 1;
+		Sino
+			factorial <- 1;
+			Para i<-1 Hasta numero Con Paso 1 Hacer
+				factorial <- factorial * i;
+			FinPara
+		FinSi
+		Escribir "El factorial de ", numero, " es: ", factorial;
+	FinSi
+FinAlgoritmo
