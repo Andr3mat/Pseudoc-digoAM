@@ -1,0 +1,16 @@
+Algoritmo ImprimirNombre
+	
+	nombre <- Cadena
+	veces <- entero
+	
+	Escribir "Introduce tu nombre:"
+	Leer nombre
+	
+	Escribir "¿Cuántas veces quieres imprimir tu nombre?"
+	Leer veces
+	
+	Para i <- 1 Hasta veces Hacer
+		Escribir nombre
+	Fin Para
+	
+FinAlgoritmo
