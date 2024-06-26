@@ -1,0 +1,11 @@
+Algoritmo EsAnioBisiesto
+	Definir anio Como Entero;
+	Escribir "Ingrese un año para verificar si es bisiesto:";
+	Leer anio;
+	
+	Si (anio mod 4 = 0 Y anio mod 100 <> 0) O (anio mod 400 = 0) Entonces
+		Escribir anio, " es un año bisiesto.";
+	Sino
+		Escribir anio, " no es un año bisiesto.";
+	FinSi
+FinAlgoritmo
