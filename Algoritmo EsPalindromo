@@ -1,0 +1,35 @@
+Algoritmo EsPalindromo
+	Definir frase_original, frase_sin_espacios, caracter Como Cadena;
+	Definir i, j Como Entero;
+	Definir es_palindromo Como Logico;
+	
+	Escribir "Ingrese una palabra o frase:";
+	Leer frase_original;
+	
+	frase_sin_espacios <- "";
+	Para i<-1 Hasta Longitud(frase_original) Con Paso 1 Hacer
+		caracter <- SubCadena(frase_original, i, 1);
+		caracter <- Minusculas(caracter);
+		Si caracter <> " " Y caracter <> "," Y caracter <> "." Y caracter <> ";" Y caracter <> ":" Y caracter <> "¡" Y caracter <> "!" Y caracter <> "¿" Y caracter <> "?" Entonces
+			frase_sin_espacios <- frase_sin_espacios + caracter;
+		Fin Si
+	Fin Para
+	
+	i <- 1;
+	j <- Longitud(frase_sin_espacios);
+	es_palindromo <- Verdadero;
+	Mientras i < j Y es_palindromo Hacer
+		Si SubCadena(frase_sin_espacios, i, 1) <> SubCadena(frase_sin_espacios, j, 1) Entonces
+			es_palindromo <- Falso;
+		Fin Si
+		i <- i + 1;
+		j <- j - 1;
+	Fin Mientras
+	
+	Si es_palindromo Entonces
+		Escribir "La frase o palabra es un palíndromo."
+	SiNo 
+		Escribir "La frase o palabra NO es un palíndromo"
+	Fin Si
+	
+Fin Algoritmo
