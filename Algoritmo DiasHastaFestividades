@@ -1,0 +1,38 @@
+Algoritmo DiasHastaFestividades
+	
+	Definir dia_actual, mes_actual, anio_actual Como Entero;
+	Definir dia_muertos, mes_muertos, dia_navidad, mes_navidad Como Entero;
+	Definir dias_para_muertos, dias_para_navidad, diferencia_meses Como Entero;
+	
+
+	dia_muertos <- 2;
+	mes_muertos <- 11; 
+	dia_navidad <- 25;
+	mes_navidad <- 12; 
+	
+	
+	Escribir "Ingrese el día actual:";
+	Leer dia_actual;
+	Escribir "Ingrese el mes actual:";
+	Leer mes_actual;
+	Escribir "Ingrese el año actual:";
+	Leer anio_actual;
+	
+	
+	diferencia_meses <- mes_muertos - mes_actual;
+	Si diferencia_meses < 0 O (diferencia_meses = 0 Y dia_actual > dia_muertos) Entonces
+		diferencia_meses <- diferencia_meses + 12;
+	FinSi
+	dias_para_muertos <- diferencia_meses * 30 + (dia_muertos - dia_actual);
+	
+	
+	diferencia_meses <- mes_navidad - mes_actual;
+	Si diferencia_meses < 0 O (diferencia_meses = 0 Y dia_actual > dia_navidad) Entonces
+		diferencia_meses <- diferencia_meses + 12;
+	FinSi
+	dias_para_navidad <- diferencia_meses * 30 + (dia_navidad - dia_actual);
+	
+
+	Escribir "Faltan ", dias_para_muertos, " días para el Día de Muertos.";
+	Escribir "Faltan ", dias_para_navidad, " días para Navidad.";
+FinAlgoritmo
