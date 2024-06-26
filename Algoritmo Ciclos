@@ -1,0 +1,11 @@
+
+Algoritmo Ciclos
+	
+	Mientras i < 3 Hacer
+		Escribir "¿Cual es el nombre de la persona?"
+		Leer nombre_persona
+		Escribir "Hola, " +nombre_persona+ " bienvenido a esta nueva clase"
+		i = i+1
+	Fin Mientras
+	
+FinAlgoritmo
