@@ -1,0 +1,15 @@
+Algoritmo EsBisiesto
+	
+	Año <- entero
+	
+	Escribir "Introduce un año para verificar si es bisiesto o no:"
+    Leer año
+	
+	Si (año % 4 = 0 Y año % 100 <> 0) O (año % 400 = 0) Entonces
+        Escribir año, " es un año bisiesto."
+    Sino
+        Escribir año, " no es un año bisiesto."
+    FinSi
+	
+	
+FinAlgoritmo
