@@ -1,5 +1,5 @@
 # Pseudoc-digoAM
-Ejercicios de algoritmos
+Algoritmo CalcularVolumenEsfera
 
 Algoritmo CalcularVolumenEsfera
 	
